@@ -1,9 +1,10 @@
-import "../styles/Main.css"
+import "../Home.css"
 
-const Main = () => {
-    return (
-        <>
-            <div className="main-container">
+const Home = () => {
+  return (
+    <>
+     <div>
+        <div className="main-container">
                 <div className="bg-image"></div>
 
                 <div className="text-container">
@@ -14,9 +15,10 @@ const Main = () => {
                     </p>
                     <button>Find your van</button>
                 </div>
-            </div>
-        </>
-    )
+          </div>
+     </div>
+    </>
+  )
 }
 
-export default Main
+export default Home
