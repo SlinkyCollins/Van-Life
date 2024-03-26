@@ -1,0 +1,62 @@
+.header {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    margin: 150px 50px 60px 50px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.buttonContainer button {
+    background: rgba(255, 234, 208, 1);
+    color: rgba(77, 77, 77, 1);
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filter-text p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(77, 77, 77, 1);
+}
+
+#simple:hover {
+    color: #ffead0;
+    background: #e17654;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+#luxury:hover {
+    background: #161616;
+    color: #ffead0;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+#rugged:hover {
+    background-color: #115e59;
+    color: #ffead0;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
