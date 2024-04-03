@@ -1,5 +1,11 @@
 import "../Vans.css"
 import Card from "../Card.jsx"
+import van2 from "../pages/van 2.png"
+import van1 from "../pages/van 1.png"
+import van3 from "../pages/van 3.jpeg"
+import van4 from "../pages/van 4.png"
+import van5 from "../pages/van 5.png"
+import van7 from "../pages/van 7.png"
 
 
 const Vans = () => {
@@ -24,37 +30,37 @@ const Vans = () => {
             margin: "80px 50px 80px 50px"
             }}>
         <Card
-          imageUrl="../src/assets/van 2.png"
+          imageUrl={van2}
           title="Modest Explorer"
           price="$60"
           type="Simple"
         />
         <Card
-          imageUrl="../src/assets/van 7.png"
+          imageUrl={van7}
           title="Beach Bum"
           price="$80"
           type="Rugged"
         />
         <Card
-          imageUrl="../src/assets/van 3.jpeg"
+          imageUrl={van3}
           title="Reliable Red"
           price="$100"
           type="Luxury"
         />
         <Card
-          imageUrl="../src/assets/van 1.png"
+          imageUrl={van1}
           title="Dreamfinder"
           price="$65"
           type="Simple"
         />
         <Card
-          imageUrl="../src/assets/van 4.png"
+          imageUrl={van4}
           title="The Cruiser"
           price="$120"
           type="Luxury"
         />
         <Card
-        imageUrl="../src/assets/van 5.png"
+        imageUrl={van5}
         title="Green Wonder"
         price="$70"
         type="Rugged"
