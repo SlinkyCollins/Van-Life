@@ -6,11 +6,13 @@ import van3 from "../pages/van 3.jpeg"
 import van4 from "../pages/van 4.png"
 import van5 from "../pages/van 5.png"
 import van7 from "../pages/van 7.png"
+import Navbar from "../Navbar.jsx"
 
 
 const Vans = () => {
   return (
     <div>
+      <Navbar/>
       <h1 className="header">Explore our van options</h1>
       <div className="navigation">
         <div className="buttonContainer">

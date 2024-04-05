@@ -1,9 +1,7 @@
-.isActive {
-    font-weight: bold;
+.nav-link:hover {
+    text-decoration: underline !important;
 }
 
-.text-info {
-    color: aqua;
-}
+
 
   

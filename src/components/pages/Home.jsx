@@ -1,9 +1,11 @@
 import "../Home.css"
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 
 const Home = () => {
   return (
     <>
+    <Navbar/>
      <div>
         <div className="main-container">
                 <div className="bg-image"></div>
@@ -14,7 +16,7 @@ const Home = () => {
                         <br />
                         Rent the perfect van to make your perfect road trip.
                     </p>
-                    <Link to="/Vans"><button>Find your van</button></Link>
+                    <Link to="/vans"><button>Find your van</button></Link>
                 </div>
           </div>
      </div>

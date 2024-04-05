@@ -14,6 +14,33 @@ body {
     overflow-x: hidden;
 }
 
+button {
+    cursor: pointer;
+}
+
+/* 
+.navlink > li:active {
+    text-decoration: underline !important;
+} */
+
+/* .navlink > li:hover {
+    color: blue !important;
+}
+
+.navlink > li:focus {
+    color: pink !important;
+}
+
+.navlink > li:link {
+    color: gold !important;
+}
+
+.navlink > li:visited {
+    color: purple !important;
+} */
+
+
+
 
 
 
