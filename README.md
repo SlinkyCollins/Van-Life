@@ -1,1 +1,1 @@
-A React-based platform for buying and selling vans. Modern interface, detailed listings, and user authentication for seamless transactions.💪
+This is a React-based platform for buying and selling vans. Modern interface, detailed listings, and user authentication for seamless transactions.💪
