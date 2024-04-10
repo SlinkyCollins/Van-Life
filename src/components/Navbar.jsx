@@ -20,8 +20,8 @@ const Navbar = () => {
               className="nav-link"
               style={{
                 textDecoration: pathname === "/about" ? "underline" : "none",
-                color: pathname === "/about" ? "#007bff" : "#4D4D4D",
-                fontSize: pathname === "/about" ? "18px" : "16px",
+                color: pathname === "/about" ? "#000" : "#4D4D4D",
+                fontSize: "16px",
                 fontWeight: "600",
                 cursor: "pointer"
               }}
@@ -36,8 +36,8 @@ const Navbar = () => {
               className="nav-link"
               style={{
                 textDecoration: pathname === "/vans" ? "underline" : "none",
-                color: pathname === "/vans" ? "#007bff" : "#4D4D4D",
-                fontSize: pathname === "/vans" ? "18px" : "16px",
+                color: pathname === "/vans" ? "#000" : "#4D4D4D",
+                fontSize: "16px",
                 fontWeight: "600",
                 cursor: "pointer"
               }}
@@ -50,9 +50,8 @@ const Navbar = () => {
               to="/signin"
               className="nav-link"
               style={{
-                textDecoration: pathname === "/signin" ? "underline" : "none",
-                color: pathname === "/signin" ? "#007bff" : "#4D4D4D",
-                fontSize: pathname === "/signin" ? "18px" : "16px",
+                color: "#000",
+                fontSize: '18px',
                 fontWeight: "600",
                 cursor: "pointer"
               }}

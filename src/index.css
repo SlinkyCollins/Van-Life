@@ -18,9 +18,14 @@ button {
     cursor: pointer;
 }
 
+/* .text-active {
+    font-weight: 700;
+    color: lightblue;
+} */
+
 /* 
-.navlink > li:active {
-    text-decoration: underline !important;
+.navlink:active {
+    text-decoration: wavy !important;
 } */
 
 /* .navlink > li:hover {
