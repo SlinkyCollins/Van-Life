@@ -32,16 +32,19 @@ const Dashboard = () => {
           imageLink={van1}
           title="Modest Explorer"
           price={60}
+          edit="Edit"
          />
          <Listedvancomponent
           imageLink={van2}
           title="Beach Bum"
           price={80}
+          edit="Edit"
          />
          <Listedvancomponent
           imageLink={van3}
           title="Green Wonder"
           price={70}
+          edit="Edit"
          />
         </div>
       </div>

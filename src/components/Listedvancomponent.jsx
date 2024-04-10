@@ -1,6 +1,6 @@
 
 
-const Listedvancomponent = ({ imageLink, title, price }) => {
+const Listedvancomponent = ({ imageLink, title, price, edit }) => {
     return (
         <div style={{ background: "#fff", padding: "2rem", borderRadius: "0.4rem"}}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -11,7 +11,7 @@ const Listedvancomponent = ({ imageLink, title, price }) => {
                         <p style={{ color: "rgba(77, 77, 77, 1)"}}>${price}/day</p>
                     </div>
                 </div>
-                <p style={{fontSize: "1rem", fontWeight: "500"}}>Edit</p>
+                <p style={{fontSize: "1rem", fontWeight: "500"}}>{edit}</p>
             </div>
         </div>
     )
