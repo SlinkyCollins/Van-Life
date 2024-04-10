@@ -2,6 +2,7 @@ import Listedvancomponent from "../Listedvancomponent"
 import van1 from "../pages/van 2.png"
 import van2 from "../pages/van 7.png"
 import van3 from "../pages/van 5.png"
+import { IoIosStar } from "react-icons/io";
 
 const Dashboard = () => {
   return (
@@ -15,8 +16,8 @@ const Dashboard = () => {
         <p style={{fontSize: "3.2rem", fontWeight: "800"}}>$2,260</p>
       </div>
 
-      <div style={{ background: "rgba(255, 221, 178, 1)", padding: "2.5rem", display: "flex", justifyContent: "space-between" }}>
-        <p>Review score &nbsp; <span>5.0</span><span>/5</span></p>
+      <div style={{ background: "rgba(255, 221, 178, 1)", padding: "4rem 2.5rem 4rem 2.5rem", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        <p style={{fontSize: "24px", fontWeight: "700"}}>Review score &nbsp; <IoIosStar style={{color: "rgba(255, 140, 56, 1)", fontSize: "1.5rem", padding: "0.19rem 0.142rem 0rem 0rem"}}/><span>5.0</span><span style={{color: "rgba(77, 77, 77, 1)"}}>/5</span></p>
         <p style={{fontSize: "1rem", fontWeight: "500"}}>Details</p>
       </div>
 
