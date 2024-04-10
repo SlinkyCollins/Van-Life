@@ -10,6 +10,7 @@ import Income from "./components/pages/Income"
 import Dashboard from "./components/pages/Dashboard"
 import Listedvans from "./components/pages/Listedvans"
 import Review from "./components/pages/Review"
+import Signup from "./components/pages/Signup"
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         </Route> 
         <Route path="about" element={<About/>}/>
         <Route path="vans" element={<Vans/>}/>
+        <Route path="/signup" element={<Signup/>}/>
         <Route path="signin" element={<Signin/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>

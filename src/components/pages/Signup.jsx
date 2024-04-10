@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 
-const Signin = () => {
+const Signup = () => {
     const { pathname } = useLocation();
     return (
         <div style={{ background: "rgba(255, 247, 237, 1)" }}>
@@ -66,7 +66,7 @@ const Signin = () => {
                                 to="/signin"
                                 className="nav-link"
                                 style={{
-                                    color: pathname === "/signin" ? "rgba(255, 140, 56, 1)" : "#4D4D4D",
+                                    color: pathname === "/signup" ? "rgba(255, 140, 56, 1)" : "#4D4D4D",
                                     fontSize: "18px",
                                     fontWeight: "600",
                                     cursor: "pointer"
@@ -79,21 +79,40 @@ const Signin = () => {
                 </div>
             </nav>
 
-            <div style={{ margin: "0" }}>
-                <h1 style={{ fontWeight: "700", fontSize: "3.2rem", textAlign: "center", padding: "3rem 2rem 4rem" }}>Sign in to your account</h1>
-                <div style={{textAlign: "center"}}>
-                    <div style={{display: "flex", flexDirection: "column", width: "80%", margin: "0 auto", paddingBottom: "1rem"}}>
-                        <input type="email" placeholder="Email Address" style={{ border: "1px solid rgba(209, 213, 219, 1)", padding: "1.2rem", borderTopLeftRadius: "5px",  borderTopRightRadius: "5px", fontSize: "1rem", fontWeight: "400", outline: "none" }} />
-                        <input type="password" placeholder="Password" style={{ border: "1px solid rgba(209, 213, 219, 1)", padding: "1.2rem", borderBottomRightRadius: "5px", borderBottomLeftRadius: "5px", fontSize: "1rem", fontWeight: "400", outline: "none"}} />
-                    </div>
-                    <p style={{textAlign: "left", paddingLeft: "8rem", fontSize: "0.8rem", color: "rgba(255, 140, 56, 1)", cursor: "pointer"}}>Forgot your password?</p>
-                    <button style={{ background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", color: "rgba(255, 255, 255, 1)", fontSize: "1.2rem", fontWeight: "700", padding: "1.3rem 29.5rem", borderRadius: "10px", margin: "1.5rem 0 4.5rem 0" }}>Sign in</button>
-                </div>
-                <p style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "500", padding: "0 0 4rem" }}>Dont have an account? <span style={{fontSize: "1.1rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  "}}><Link to="/signup" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Create one now</Link></span></p>
+            <div style={{ textAlign: "center" }}>
+                <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>Sign up for an account</h1>
             </div>
-
+            <form style={{}}>
+                <div style={{ padding: "50px", border: "1px solid #ccc" }}>
+                    <div style={{display: 'flex', flexDirection: "column"}}>
+                        <label htmlFor="firstName">Firstname</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+                    </div>
+                    <div style={{display: 'flex', flexDirection: "column"}}>
+                        <label htmlFor="">Lastname</label>
+                        <input type="text"  placeholder="Last Name"/>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: "column"}}>
+                        <label htmlFor="">Email</label>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div style={{display: 'flex', flexDirection: "column"}}>
+                        <label htmlFor="">Password</label>
+                        <input type="password"  placeholder="Password"/>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: "column"}}>
+                        <label htmlFor="">Confirm Password</label>
+                        <input type="password"  placeholder="Re-enter Password"/>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: "row"}}>
+                        <input type="checkbox"/>
+                        <p>I accept the <span style={{color: "rgba(255, 140, 56, 1)"}}>Terms</span> and <span style={{color: "rgba(255, 140, 56, 1)"}}>Conditions</span></p>
+                    </div>
+                <button style={{textAlign: "center", background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", padding: "1rem 5rem"}}>Sign Up</button>
+                </div>
+            </form>
         </div>
     )
 }
 
-export default Signin
+export default Signup
