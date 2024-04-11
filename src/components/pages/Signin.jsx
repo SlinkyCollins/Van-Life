@@ -79,7 +79,7 @@ const Signin = () => {
                 </div>
             </nav>
 
-            <div style={{ margin: "0" }}>
+            <form style={{ margin: "0" }}>
                 <h1 style={{ fontWeight: "700", fontSize: "3.2rem", textAlign: "center", padding: "3rem 2rem 4rem" }}>Sign in to your account</h1>
                 <div style={{textAlign: "center"}}>
                     <div style={{display: "flex", flexDirection: "column", width: "80%", margin: "0 auto", paddingBottom: "1rem"}}>
@@ -90,7 +90,7 @@ const Signin = () => {
                     <button style={{ background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", color: "rgba(255, 255, 255, 1)", fontSize: "1.2rem", fontWeight: "700", padding: "1.3rem 29.5rem", borderRadius: "10px", margin: "1.5rem 0 4.5rem 0" }}>Sign in</button>
                 </div>
                 <p style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "500", padding: "0 0 4rem" }}>Dont have an account? <span style={{fontSize: "1.1rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  "}}><Link to="/signup" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Create one now</Link></span></p>
-            </div>
+            </form>
 
         </div>
     )

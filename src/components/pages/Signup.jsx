@@ -79,38 +79,41 @@ const Signup = () => {
                 </div>
             </nav>
 
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center", marginTop: "1rem" }}>
                 <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>Sign up for an account</h1>
             </div>
-            <form style={{}}>
-                <div style={{ padding: "50px", border: "1px solid #ccc" }}>
-                    <div style={{display: 'flex', flexDirection: "column"}}>
-                        <label htmlFor="firstName">Firstname</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name" />
-                    </div>
-                    <div style={{display: 'flex', flexDirection: "column"}}>
-                        <label htmlFor="">Lastname</label>
-                        <input type="text"  placeholder="Last Name"/>
-                    </div>
-                    <div style={{display: 'flex', flexDirection: "column"}}>
-                        <label htmlFor="">Email</label>
-                        <input type="email" placeholder="Email" />
-                    </div>
-                    <div style={{display: 'flex', flexDirection: "column"}}>
-                        <label htmlFor="">Password</label>
-                        <input type="password"  placeholder="Password"/>
-                    </div>
-                    <div style={{display: 'flex', flexDirection: "column"}}>
-                        <label htmlFor="">Confirm Password</label>
-                        <input type="password"  placeholder="Re-enter Password"/>
-                    </div>
-                    <div style={{display: 'flex', flexDirection: "row"}}>
-                        <input type="checkbox"/>
-                        <p>I accept the <span style={{color: "rgba(255, 140, 56, 1)"}}>Terms</span> and <span style={{color: "rgba(255, 140, 56, 1)"}}>Conditions</span></p>
-                    </div>
-                <button style={{textAlign: "center", background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", padding: "1rem 5rem"}}>Sign Up</button>
+            <div className="formcontainer" style={{maxWidth: "40rem", margin: "0 auto", padding: "4rem 0"}}>
+                <div style={{  border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "10px"}}>
+                    <form style={{padding: "3.125rem 3.125rem 2.125rem"}}>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".5rem 0" }}>
+                            <label htmlFor="firstName" style={{marginBottom: ".4rem", fontSize: "1rem", fontWeight: "400"}}>Firstname</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2rem", width: "100%"}} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".5rem 0" }}>
+                            <label htmlFor="" style={{marginBottom: ".4rem", fontSize: "1rem", fontWeight: "400"}}>Lastname</label>
+                            <input type="text" placeholder="Last Name" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2rem", width: "100%"}} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".5rem 0" }}>
+                            <label htmlFor="" style={{marginBottom: ".4rem", fontSize: "1rem", fontWeight: "400"}}>Email</label>
+                            <input type="email" placeholder="Email" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2rem", width: "100%"}} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".5rem 0" }}>
+                            <label htmlFor="" style={{marginBottom: ".4rem", fontSize: "1rem", fontWeight: "400"}}>Password</label>
+                            <input type="password" placeholder="Password" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2rem", width: "100%"}} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".5rem 0" }}>
+                            <label htmlFor="" style={{marginBottom: ".4rem", fontSize: "1rem", fontWeight: "400"}}>Confirm Password</label>
+                            <input type="password" placeholder="Re-enter Password" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2rem", width: "100%"}} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "row", padding: "1rem 0 1.5rem", gap: ".3rem" }}>
+                            <input type="checkbox" />
+                            <p style={{fontSize: ".85rem"}}>I accept the <span style={{ color: "rgba(255, 140, 56, 1)" }}>Terms</span> and <span style={{ color: "rgba(255, 140, 56, 1)" }}>Conditions</span></p>
+                        </div>
+                        <button style={{ textAlign: "center", background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", padding: "1rem 5rem", width: "100%", borderRadius: "5px", color: "#fff", fontSize: "1.1rem", fontWeight: "600" }}>Sign Up</button>
+                        <p style={{ textAlign: "center", fontSize: ".8rem", fontWeight: "500", padding: "1.8rem 0 0"}}>Already have an account? <span style={{fontSize: ".8rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  "}}><Link to="/signin" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Sign In</Link></span></p>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     )
 }
