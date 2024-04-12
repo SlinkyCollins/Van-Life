@@ -3,11 +3,33 @@ import { CgProfile } from "react-icons/cg";
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
-// import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useState } from "react";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const Signup = () => {
     const { pathname } = useLocation();
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
+    const toggleConfirmPasswordVisibility = () => {
+        setConfirmPasswordVisible(!confirmPasswordVisible);
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleConfirmPasswordChange = (e) => {
+        setConfirmPassword(e.target.value);
+    };
+
     return (
         <div style={{ background: "rgba(255, 247, 237, 1)" }}>
             <nav style={{ background: "#FFF7ED", padding: "30px", zIndex: "1000", width: "100%", userSelect: "none" }}>
@@ -90,34 +112,51 @@ const Signup = () => {
             <div className="formcontainer" style={{ maxWidth: "40rem", margin: "0 auto", padding: "2.5rem 0 4rem" }}>
                 <div style={{ boxShadow: "0 0px 0.1875rem 0 rgba(0, 0, 0, 0.15)", borderRadius: "10px" }}>
                     <form style={{ padding: "2.125rem 3.125rem 2.125rem" }}>
-                        <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0"}}>
-                            <label htmlFor="userName" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>Username</label>
-                            <div style={{position: "relative"}}>
-                                <span style={{position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280"}}>{<PersonIcon style={{fontSize: "1.3rem"}}/>}</span>
-                                <input type="text" id="userName" name="userName" placeholder="Your Name" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
+                            <label htmlFor="firstName" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>First Name</label>
+                            <div style={{ position: "relative" }}>
+                                <span style={{ position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280" }}>{<PersonIcon style={{ fontSize: "1.3rem" }} />}</span>
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
+                            <label htmlFor="lastName" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>Last Name</label>
+                            <div style={{ position: "relative" }}>
+                                <span style={{ position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280" }}>{<PersonIcon style={{ fontSize: "1.3rem" }} />}</span>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
                             </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
                             <label htmlFor="" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>Email Address</label>
-                            <div style={{position: "relative"}}>
-                                <span style={{position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280"}}>{<EmailIcon style={{fontSize: "1.3rem"}} />}</span>
+                            <div style={{ position: "relative" }}>
+                                <span style={{ position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280" }}>{<EmailIcon style={{ fontSize: "1.3rem" }} />}</span>
                                 <input type="email" placeholder="Email" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
                             </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
                             <label htmlFor="" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>Password</label>
-                            <div style={{position: "relative"}}>
-                                <span style={{position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280"}}>{<LockIcon style={{fontSize: "1.3rem"}} />}</span>
-                                <input type="password" placeholder="Password" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
-                                <span style={{position: "absolute", top: "0", right: "0", color: "#6b7280", padding: "6px 15px 0px 0px", cursor: "pointer"}} title="Toggle password">{<VisibilityOffIcon style={{fontSize: "1.32rem"}}/>}</span>
+                            <div style={{ position: "relative" }}>
+                                <span style={{ position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280" }}>{<LockIcon style={{ fontSize: "1.3rem" }} />}</span>
+                                <input
+                                    type={passwordVisible ? "text" : "password"}
+                                    value={password}
+                                    onChange={handlePasswordChange}
+                                    placeholder="Password"
+                                    style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
+                                <span onClick={togglePasswordVisibility} style={{ position: "absolute", top: "0", right: "0", color: "#6b7280", padding: "6px 15px 0px 0px", cursor: "pointer" }} title="Toggle password">{passwordVisible ? <VisibilityOffIcon style={{ fontSize: "1.34rem" }} /> : <VisibilityIcon style={{ fontSize: "1.32rem" }} />}</span>
                             </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
                             <label htmlFor="" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>Confirm Password</label>
-                            <div style={{position: "relative"}}>
-                                <span style={{position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280"}}>{<LockIcon style={{fontSize: "1.3rem"}} />}</span>
-                                <input type="password" placeholder="Re-enter Password" style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
-                                <span style={{position: "absolute", top: "0", right: "0", color: "#6b7280", padding: "6px 15px 0px 0px", cursor: "pointer"}} title="Toggle password">{<VisibilityOffIcon style={{fontSize: "1.34rem"}}/>}</span>
+                            <div style={{ position: "relative" }}>
+                                <span style={{ position: "absolute", top: "0", left: "0", padding: "5px", border: "1px solid rgba(209, 213, 219, 1)", borderTopLeftRadius: "5px", borderBottomLeftRadius: "5px", background: "#f9fafb", color: "#6b7280" }}>{<LockIcon style={{ fontSize: "1.3rem" }} />}</span>
+                                <input
+                                    type={confirmPasswordVisible ? "text" : "password"}
+                                    onChange={handleConfirmPasswordChange}
+                                    value={confirmPassword}
+                                    placeholder="Re-enter Password"
+                                    style={{ border: "1px solid rgba(209, 213, 219, 1)", borderRadius: "5px", outline: "none", padding: ".5rem 2.5rem", width: "100%", fontSize: "1.05rem" }} />
+                                <span onClick={toggleConfirmPasswordVisibility} style={{ position: "absolute", top: "0", right: "0", color: "#6b7280", padding: "6px 15px 0px 0px", cursor: "pointer" }} title="Toggle password">{confirmPasswordVisible ? <VisibilityOffIcon style={{ fontSize: "1.34rem" }} /> : <VisibilityIcon style={{ fontSize: "1.32rem" }} />}</span>
                             </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: "row", padding: "1rem 0 1.5rem", gap: ".3rem" }}>
