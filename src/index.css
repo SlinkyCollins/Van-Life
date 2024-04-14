@@ -12,6 +12,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    /* max-width: 2560px !important;
+    margin: 0 auto; */
 }
 
 button {
@@ -42,6 +44,13 @@ button {
 
 .navlink > li:visited {
     color: purple !important;
+} */
+
+
+/* @media (min-width: 1800px) {
+    body {
+        background: red;
+    }
 } */
 
 
