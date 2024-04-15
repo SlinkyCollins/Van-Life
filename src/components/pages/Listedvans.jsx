@@ -18,7 +18,7 @@ const Listedvans = () => {
       <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
         {vansData.map((van) => (
           <div key={van.id}>
-            <Link to={`/host/listedvans/${van.id}`}>
+            <Link to={`/host/listedvans/${van.id}`} style={{textDecoration: "none", color: "#000"}}>
               <div style={{ background: "#fff", padding: "2rem", borderRadius: "0.4rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
