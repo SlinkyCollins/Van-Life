@@ -12,6 +12,9 @@ import Listedvans from "./components/pages/Listedvans"
 import Review from "./components/pages/Review"
 import Signup from "./components/pages/Signup"
 import Vandetail from "./components/pages/Vandetail"
+import VanInfo from "./components/pages/VanInfo"
+import VanPricing from "./components/pages/VanPricing"
+import VanPhoto from "./components/pages/VanPhoto"
 
 
 function App() {
@@ -25,7 +28,11 @@ function App() {
           <Route path="" element={<Dashboard />} />
           <Route path="income" element={<Income />} />
           <Route path="/host/listedvans" element={<Listedvans />} />
-          <Route path="/host/listedvans/:id" element={<Vandetail />} />
+          <Route path="/host/listedvans/:id" element={<VanInfo/>}>
+            <Route path="" element={<Vandetail/>}/>
+            <Route path="pricing" element={<VanPricing/>} />
+            <Route path="photo" element={<VanPhoto/>} />
+          </Route>
           <Route path="reviews" element={<Review />} />
         </Route>
         <Route path="about" element={<About />} />
