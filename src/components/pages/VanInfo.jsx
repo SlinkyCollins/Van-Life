@@ -23,7 +23,10 @@ const VanInfo = () => {
      const van = vansData.find(van => van.id === id);
 
      if (!van) {
-         return <div>No van found with ID {id}</div>;
+         return <div style={{padding: "1rem 2rem 2rem"}}>
+            <p style={{marginBottom: "1rem"}}>No van found with ID: <span style={{color: "red", fontWeight: "600"}}>{id}</span></p>
+            <Link to="/host/listedvans"><button style={{padding: ".2rem .8rem", fontSize: "1rem"}}>Go back</button></Link>
+         </div>;
      }
 
     return (
@@ -63,13 +66,13 @@ const VanInfo = () => {
                 <nav>
                     <ul style={{ listStyleType: "none", display: "flex", gap: "3.8rem", padding: "1.5rem 0rem 2rem" }}>
                         <NavLink to={`/host/listedvans/${id}`} style={{ textDecoration: "none" }}>
-                            <li style={{ color: pathname === `/host/listedvans/${id}` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}` ? "700" : "500", cursor: "pointer" }}>Details</li>
+                            <li style={{ color: pathname === `/host/listedvans/${id}` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}` ? "700" : "500", cursor: "pointer", textDecoration: pathname === `/host/listedvans/${id}` ? "underline" : "none" }}>Details</li>
                         </NavLink>
                         <NavLink to={`/host/listedvans/${id}/pricing`} style={{ textDecoration: "none" }}>
-                            <li style={{ color: pathname === `/host/listedvans/${id}/pricing` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}/pricing` ? "700" : "500", cursor: "pointer" }}>Pricing</li>
+                            <li style={{ color: pathname === `/host/listedvans/${id}/pricing` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}/pricing` ? "700" : "500", cursor: "pointer", textDecoration: pathname === `/host/listedvans/${id}/pricing` ? "underline" : "none" }}>Pricing</li>
                         </NavLink>
                         <NavLink to={`/host/listedvans/${id}/photo`} style={{ textDecoration: "none" }}>
-                            <li style={{ color: pathname === `/host/listedvans/${id}/photo` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}/photo` ? "700" : "500", cursor: "pointer" }}>Photos</li>
+                            <li style={{ color: pathname === `/host/listedvans/${id}/photo` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}/photo` ? "700" : "500", cursor: "pointer", textDecoration: pathname === `/host/listedvans/${id}/photo` ? "underline" : "none" }}>Photos</li>
                         </NavLink>
                     </ul>
                 </nav>
