@@ -23,9 +23,9 @@ const VanInfo = () => {
      const van = vansData.find(van => van.id === id);
 
      if (!van) {
-         return <div style={{padding: "1rem 2rem 2rem"}}>
-            <p style={{marginBottom: "1rem"}}>No van found with ID: <span style={{color: "red", fontWeight: "600"}}>{id}</span></p>
-            <Link to="/host/listedvans"><button style={{padding: ".2rem .8rem", fontSize: "1rem"}}>Go back</button></Link>
+         return <div style={{padding: "5em 2rem 15.74rem", textAlign: "left"}}>
+            <p style={{marginBottom: "2rem", fontWeight: "400", fontSize: "2rem"}}>No van found with ID: <span style={{color: "red", fontWeight: "600"}}>{id}</span></p>
+            <Link to="/host/listedvans"><button style={{padding: ".5rem 2rem", fontSize: "1rem"}}>Go back</button></Link>
          </div>;
      }
 
