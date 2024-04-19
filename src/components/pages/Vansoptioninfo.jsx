@@ -70,20 +70,61 @@ const Vansoptioninfo = () => {
     }
 
     return (
-        <div>
+        <div style={{ background: "rgba(255, 247, 237, 1)" }}>
             <Navbar />
-            {/* Display the van details */}
-            <img src={van.imageUrl} alt={van.title} />
-            <h2>{van.title}</h2>
-            <p>Type: {van.type}</p>
-            <p>Price: {van.price}</p>
-            <p>{van.details}</p>
-
-            {/* Rent this van button */}
-            <button>Rent this van</button>
-
-            {/* Go back to all vans button */}
-            <Link to="/vans">Go back to all vans</Link>
+            <div style={{ padding: "5rem 2rem 2rem 2rem" }}>
+                <Link to="/vans" style={{ color: "#000", textDecoration: "none" }}>
+                    <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "rgba(133, 133, 133, 1)" }}>← </span>
+                        <span style={{ textDecoration: "underline", fontSize: "1rem", fontWeight: "500" }}>Back to all vans</span>
+                    </div>
+                </Link>
+                <div style={{ textAlign: "center" }}>
+                    <div style={{ marginTop: "3rem" }}>
+                        <img src={van.imageUrl} alt={van.title} style={{ width: "100%", borderRadius: "6px" }} />
+                    </div>
+                    <div style={{ textAlign: "left" }}>
+                        <button
+                            style={{
+                                outline: "none",
+                                border: "none",
+                                padding: "10px 25px",
+                                borderRadius: "5px",
+                                cursor: "pointer",
+                                fontSize: "16px",
+                                fontWeight: "600",
+                                textAlign: "center",
+                                backgroundColor: "rgba(225, 118, 84, 1)",
+                                color: "rgba(255, 234, 208, 1)",
+                                margin: "3rem 0 1.5rem"
+                            }}>
+                            {van.type}
+                        </button>
+                        <h2 style={{ fontWeight: "700", fontSize: "2.5rem" }}>{van.title}</h2>
+                        <p style={{ margin: "1rem 0 1rem", fontWeight: "700", fontSize: "1.3rem" }}>{van.price}<span style={{ fontWeight: "500", fontSize: "1.1rem" }}>/day</span></p>
+                        <div style={{ width: "100%" }}>
+                            <p style={{ fontWeight: "500", fontSize: "1rem", lineHeight: "1.4375rem" }}>{van.details}</p>
+                        </div>
+                        <div style={{ textAlign: "center" }}>
+                            <button
+                                style={{
+                                    outline: "none",
+                                    border: "none",
+                                    width: "100%",
+                                    padding: "1.6rem 0",
+                                    borderRadius: "5px",
+                                    color: "rgba(255, 255, 255, 1)",
+                                    background: "rgba(255, 140, 56, 1)",
+                                    fontWeight: "700",
+                                    fontSize: "1.3rem",
+                                    margin: "2rem 0 2rem",
+                                }}>
+                                Rent this van
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
