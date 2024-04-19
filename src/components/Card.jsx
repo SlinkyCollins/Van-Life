@@ -24,7 +24,7 @@ const Card = ({ imageUrl, title, price, type }) => {
   }, [type]);
 
   return (
-    <div style={{ overflow: "hidden", margin: "30px 0px" }}>
+    <div title="Click to view details" style={{ overflow: "hidden", margin: "30px 0px" }}>
       <div style={{ width: "350px", height: "350px" }}>
         <img src={imageUrl} style={{ width: "100%", height: "350px", objectFit: "cover", borderRadius: "10px" }} />
       </div>

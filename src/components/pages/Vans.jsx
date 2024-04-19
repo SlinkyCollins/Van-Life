@@ -88,7 +88,7 @@ const Vans = () => {
           margin: "80px 50px 80px 50px"
         }}>
         {vans.map((van) => (
-          <Link key={van.id} to={`/vans/${van.id}`}>
+          <Link key={van.id} to={`/vans/${van.id}`} style={{textDecoration: "none", color: "inherit"}}>
             <Card {...van} />
           </Link>
         ))}

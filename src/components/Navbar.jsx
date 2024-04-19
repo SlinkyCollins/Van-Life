@@ -35,8 +35,8 @@ const Navbar = () => {
               to="/vans"
               className="nav-link"
               style={{
-                textDecoration: pathname === "/vans" ? "underline" : "none",
-                color: pathname === "/vans" ? "#000" : "#4D4D4D",
+                textDecoration: pathname.startsWith("/vans") ? "underline" : "none",
+                color: pathname.startsWith("/vans") ? "#000" : "#4D4D4D",
                 fontSize: "16px",
                 fontWeight: "600",
                 cursor: "pointer"
