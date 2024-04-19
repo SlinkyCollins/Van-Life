@@ -15,6 +15,7 @@ import Vandetail from "./components/pages/Vandetail"
 import VanInfo from "./components/pages/VanInfo"
 import VanPricing from "./components/pages/VanPricing"
 import VanPhoto from "./components/pages/VanPhoto"
+import Vansoptioninfo from "./components/pages/Vansoptioninfo"
 
 
 function App() {
@@ -28,15 +29,16 @@ function App() {
           <Route path="" element={<Dashboard />} />
           <Route path="income" element={<Income />} />
           <Route path="/host/listedvans" element={<Listedvans />} />
-          <Route path="/host/listedvans/:id" element={<VanInfo/>}>
-            <Route path="" element={<Vandetail/>}/>
-            <Route path="pricing" element={<VanPricing/>} />
-            <Route path="photo" element={<VanPhoto/>} />
+          <Route path="/host/listedvans/:id" element={<VanInfo />}>
+            <Route path="" element={<Vandetail />} />
+            <Route path="pricing" element={<VanPricing />} />
+            <Route path="photo" element={<VanPhoto />} />
           </Route>
           <Route path="reviews" element={<Review />} />
         </Route>
         <Route path="about" element={<About />} />
         <Route path="vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<Vansoptioninfo />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="signin" element={<Signin />} />
         <Route path="*" element={<NotFound />} />

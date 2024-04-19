@@ -1,17 +1,13 @@
-import "../Vans.css"
-import Card from "../Card.jsx"
+import { useParams, Link } from 'react-router-dom';
 import van2 from "../pages/van 2.png"
 import van1 from "../pages/van 1.png"
 import van3 from "../pages/van 3.jpeg"
 import van4 from "../pages/van 4.png"
 import van5 from "../pages/van 5.png"
 import van7 from "../pages/van 7.png"
-import Navbar from "../Navbar.jsx"
-import { Link } from 'react-router-dom';
 
-
-const Vans = () => {
-  // Define an array of van objects
+const Vansoptioninfo = () => {
+    // Define an array of van objects
   const vans = [
     {
       id: 1,
@@ -63,38 +59,31 @@ const Vans = () => {
     },
     // Add more van objects as needed
   ];
+  // Retrieve the van ID from URL params
+  const { id } = useParams();
+  // Find the van object with the matching ID
+  const van = vans.find((van) => van.id === parseInt(id));
+
+  if (!van) {
+    return <div>Van not found</div>;
+  }
 
   return (
     <div>
-      <Navbar />
-      <h1 className="header">Explore our van options</h1>
-      <div className="navigation">
-        <div className="buttonContainer">
-          <button id="simple">Simple</button>
-          <button id="luxury">Luxury</button>
-          <button id="rugged">Rugged</button>
-        </div>
-        <div className="filter-text">
-          <p>Clear filters</p>
-        </div>
-      </div>
+      {/* Display the van details */}
+      <img src={van.imageUrl} alt={van.title} />
+      <h2>{van.title}</h2>
+      <p>Type: {van.type}</p>
+      <p>Price: {van.price}</p>
+      <p>{van.details}</p>
 
-      <div
-        style=
-        {{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-          gridGap: "10px",
-          margin: "80px 50px 80px 50px"
-        }}>
-        {vans.map((van) => (
-          <Link key={van.id} to={`/vans/${van.id}`}>
-            <Card {...van} />
-          </Link>
-        ))}
-      </div>
+      {/* Rent this van button */}
+      <button>Rent this van</button>
+
+      {/* Go back to all vans button */}
+      <Link to="/vans">Go back to all vans</Link>
     </div>
-  )
-}
+  );
+};
 
-export default Vans
+export default Vansoptioninfo;
