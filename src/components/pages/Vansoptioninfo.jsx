@@ -66,7 +66,13 @@ const Vansoptioninfo = () => {
     const van = vans.find((van) => van.id === parseInt(id));
 
     if (!van) {
-        return <div>Van not found</div>;
+        return <div>
+            <Navbar />
+            <div style={{ padding: "5rem 2rem 21.13rem", textAlign: "left" }}>
+                <p style={{ marginBottom: "2rem", fontWeight: "400", fontSize: "2rem" }}>No van found with ID: <span style={{ color: "red", fontWeight: "600" }}>{id}</span></p>
+                <Link to="/vans"><button style={{ padding: ".5rem 2rem", fontSize: "1rem" }}>Go back</button></Link>
+            </div>
+        </div>;
     }
 
     return (

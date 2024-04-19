@@ -23,7 +23,7 @@ const VanInfo = () => {
      const van = vansData.find(van => van.id === id);
 
      if (!van) {
-         return <div style={{padding: "5em 2rem 15.74rem", textAlign: "left"}}>
+         return <div style={{padding: "5rem 2rem 15.74rem", textAlign: "left"}}>
             <p style={{marginBottom: "2rem", fontWeight: "400", fontSize: "2rem"}}>No van found with ID: <span style={{color: "red", fontWeight: "600"}}>{id}</span></p>
             <Link to="/host/listedvans"><button style={{padding: ".5rem 2rem", fontSize: "1rem"}}>Go back</button></Link>
          </div>;
