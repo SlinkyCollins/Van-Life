@@ -17,7 +17,7 @@
     gap: 30px;
 }
 
-.buttonContainer button {
+.category-button {
     background: rgba(255, 234, 208, 1);
     color: rgba(77, 77, 77, 1);
     text-align: center;

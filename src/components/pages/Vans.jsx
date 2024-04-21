@@ -83,9 +83,39 @@ const Vans = () => {
       <h1 className="header">Explore our van options</h1>
       <div className="navigation">
         <div className="buttonContainer">
-          <button id="simple" onClick={() => handleFilterClick('Simple')}>Simple</button>
-          <button id="luxury" onClick={() => handleFilterClick('Luxury')}>Luxury</button>
-          <button id="rugged" onClick={() => handleFilterClick('Rugged')}>Rugged</button>
+          <button 
+          id="simple" 
+          className="category-button"
+          onClick={() => handleFilterClick('Simple')}
+          style={{
+            backgroundColor: selectedCategory === 'Simple' ? '#e17654' : '',
+            color: selectedCategory === 'Simple' ? '#ffead0' : ''
+          }}
+          >
+          Simple
+          </button>
+          <button 
+          id="luxury" 
+          className="category-button"
+          onClick={() => handleFilterClick('Luxury')}
+          style={{
+            backgroundColor: selectedCategory === 'Luxury' ? '#161616' : '',
+            color: selectedCategory === 'Luxury' ? '#ffead0' : ''
+          }}
+          >
+          Luxury
+          </button>
+          <button 
+          id="rugged" 
+          className="category-button"
+          onClick={() => handleFilterClick('Rugged')}
+          style={{
+            backgroundColor: selectedCategory === 'Rugged' ? '#115e59' : '',
+            color: selectedCategory === 'Rugged' ? '#ffead0' : ''
+          }}
+          >
+          Rugged
+          </button>
         </div>
         <div className="filter-text">
           <p onClick={clearFilters}>Clear filters</p>
