@@ -7,10 +7,13 @@ import van4 from "../pages/van 4.png"
 import van5 from "../pages/van 5.png"
 import van7 from "../pages/van 7.png"
 import Navbar from "../Navbar.jsx"
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 const Vans = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   // Define an array of van objects
   const vans = [
     {
@@ -64,18 +67,28 @@ const Vans = () => {
     // Add more van objects as needed
   ];
 
+  const filteredVans = selectedCategory ? vans.filter(van => van.type === selectedCategory) : vans;
+
+  const handleFilterClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const clearFilters = () => {
+    setSelectedCategory(null);
+  };
+
   return (
     <div>
       <Navbar />
       <h1 className="header">Explore our van options</h1>
       <div className="navigation">
         <div className="buttonContainer">
-          <button id="simple">Simple</button>
-          <button id="luxury">Luxury</button>
-          <button id="rugged">Rugged</button>
+          <button id="simple" onClick={() => handleFilterClick('Simple')}>Simple</button>
+          <button id="luxury" onClick={() => handleFilterClick('Luxury')}>Luxury</button>
+          <button id="rugged" onClick={() => handleFilterClick('Rugged')}>Rugged</button>
         </div>
         <div className="filter-text">
-          <p>Clear filters</p>
+          <p onClick={clearFilters}>Clear filters</p>
         </div>
       </div>
 
@@ -87,7 +100,7 @@ const Vans = () => {
           gridGap: "10px",
           margin: "80px 50px 80px 50px"
         }}>
-        {vans.map((van) => (
+        {filteredVans.map((van) => (
           <Link key={van.id} to={`/vans/${van.id}`} style={{textDecoration: "none", color: "inherit"}}>
             <Card {...van} />
           </Link>
