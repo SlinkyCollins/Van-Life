@@ -6,8 +6,13 @@ import van4 from "../pages/van 4.png"
 import van5 from "../pages/van 5.png"
 import van7 from "../pages/van 7.png"
 import Navbar from "../Navbar.jsx"
+import { useState, useEffect } from 'react';
 
 const Vansoptioninfo = () => {
+    const [buttonStyles, setButtonStyles] = useState({
+        background: "rgba(225, 118, 84, 1)",
+        color: "#fff",
+    });
     // Define an array of van objects
     const vans = [
         {
@@ -60,10 +65,28 @@ const Vansoptioninfo = () => {
         },
         // Add more van objects as needed
     ];
+
+
     // Retrieve the van ID from URL params
     const { id } = useParams();
     // Find the van object with the matching ID
     const van = vans.find((van) => van.id === parseInt(id));
+
+    useEffect(() => {
+        let newButtonStyles = { ...buttonStyles };
+
+        if (van.type === "Simple") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#e17654";
+        } else if (van.type === "Luxury") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#161616";
+        } else if (van.type === "Rugged") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#115e59";
+        }
+        setButtonStyles(newButtonStyles);
+    }, [van.type]);
 
     if (!van) {
         return <div>
@@ -92,6 +115,7 @@ const Vansoptioninfo = () => {
                     <div style={{ textAlign: "left" }}>
                         <button
                             style={{
+                                ...buttonStyles,
                                 outline: "none",
                                 border: "none",
                                 padding: "10px 25px",
@@ -100,8 +124,8 @@ const Vansoptioninfo = () => {
                                 fontSize: "16px",
                                 fontWeight: "600",
                                 textAlign: "center",
-                                backgroundColor: "rgba(225, 118, 84, 1)",
-                                color: "rgba(255, 234, 208, 1)",
+                                // backgroundColor: "rgba(225, 118, 84, 1)",
+                                // color: "rgba(255, 234, 208, 1)",
                                 margin: "3rem 0 1.5rem"
                             }}>
                             {van.type}
@@ -112,21 +136,23 @@ const Vansoptioninfo = () => {
                             <p style={{ fontWeight: "500", fontSize: "1rem", lineHeight: "1.4375rem" }}>{van.details}</p>
                         </div>
                         <div style={{ textAlign: "center" }}>
-                            <button
-                                style={{
-                                    outline: "none",
-                                    border: "none",
-                                    width: "100%",
-                                    padding: "1.6rem 0",
-                                    borderRadius: "5px",
-                                    color: "rgba(255, 255, 255, 1)",
-                                    background: "rgba(255, 140, 56, 1)",
-                                    fontWeight: "700",
-                                    fontSize: "1.3rem",
-                                    margin: "2rem 0 2rem",
-                                }}>
-                                Rent this van
-                            </button>
+                            <Link to="/signin">
+                                <button
+                                    style={{
+                                        outline: "none",
+                                        border: "none",
+                                        width: "100%",
+                                        padding: "1.6rem 0",
+                                        borderRadius: "5px",
+                                        color: "rgba(255, 255, 255, 1)",
+                                        background: "rgba(255, 140, 56, 1)",
+                                        fontWeight: "700",
+                                        fontSize: "1.3rem",
+                                        margin: "2rem 0 2rem",
+                                    }}>
+                                    Rent this van
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -127,7 +127,7 @@ const Vans = () => {
         {{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-          gridGap: "10px",
+          gridGap: "2rem",
           margin: "80px 50px 80px 50px"
         }}>
         {filteredVans.map((van) => (
