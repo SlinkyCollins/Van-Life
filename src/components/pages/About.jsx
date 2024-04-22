@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
     <Navbar/>
-        <img src={aboutImage} style={{width: "100%", height: "680px", objectFit: "cover"}} />
+        <img src={aboutImage} style={{width: "100%", height: "42.5rem", objectFit: "cover"}} />
         <div style={{padding: "50px"}}>
           <h1 style={{fontSize: " 70px", fontWeight: "700", lineHeight: "80px", margin: "50px 0px 0px"}}>Do not squeeze in a sedan when you could relax in a van.</h1>
           <p style={{fontSize: "22px", fontWeight: "500px", lineHeight: "28px", margin: "80px 0px 50px"}}>Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch. (Hitch costs extra 😉)</p>

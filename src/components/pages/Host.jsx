@@ -11,7 +11,7 @@ const Host = () => {
     <div style={{ background: "rgba(255, 247, 237, 1)" }}>
       <Navbar2 />
       <nav style={{ position: "sticky", padding: "2rem", top: "0", left: "0", zIndex: "1000", background: "rgba(255, 247, 237, 1)" }}>
-        <ul style={{ display: "flex", gap: "2rem", fontWeight: "500", fontSize: "1.125rem", textAlign: "center", alignItems: "center" }}>
+        <ul style={{ display: "flex", gap: "2rem", fontWeight: "500", fontSize: "1.125rem", textAlign: "center", alignItems: "center", flexWrap: "wrap"}}>
           <li style={{ listStyleType: "none" }}>
             <NavLink
               to=""

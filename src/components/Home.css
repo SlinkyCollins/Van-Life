@@ -28,9 +28,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     width: 100%;
-    padding: 200px 0px 0px 80px;
+    padding: 12.5rem 0px 0px 5rem;
 }
 
 .text-container h1 {
@@ -55,11 +54,10 @@
     border-radius: 10px;
     background-color: rgba(255, 140, 56, 1);
     color: #fff;
-    width: 93%;
-    padding: 30px 40px;
-    font-size: 30px;
+    width: 90%;
+    max-width: 100%;
+    padding: 2rem 4rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    text-align: center;
     cursor: pointer;
-    margin-right: 90px;
 }

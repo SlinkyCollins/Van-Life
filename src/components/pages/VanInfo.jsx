@@ -62,9 +62,9 @@ const VanInfo = () => {
             </Link>
 
             <div style={{ background: "rgba(255, 255, 255, 1)", padding: "2rem", margin: "3rem 0 3rem", borderRadius: "5px" }}>
-                <div style={{ display: "flex", gap: "2.2rem" }}>
+                <div style={{ display: "flex", gap: "2.2rem", flexWrap: "wrap" }}>
                     <div>
-                        <img src={van.imageLink} style={{ width: "16rem", borderRadius: "2px" }} />
+                        <img src={van.imageLink} style={{ width: "100%", borderRadius: "2px" }} />
                     </div>
                     <div style={{ margin: "1.85rem 0" }}>
                         <button style={{
@@ -87,7 +87,7 @@ const VanInfo = () => {
                 </div>
 
                 <nav>
-                    <ul style={{ listStyleType: "none", display: "flex", gap: "3.8rem", padding: "1.5rem 0rem 2rem" }}>
+                    <ul style={{ listStyleType: "none", display: "flex", gap: "3.8rem", padding: "1.5rem 0rem 2rem", flexWrap: "wrap" }}>
                         <NavLink to={`/host/listedvans/${id}`} style={{ textDecoration: "none" }}>
                             <li style={{ color: pathname === `/host/listedvans/${id}` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}` ? "700" : "500", cursor: "pointer", textDecoration: pathname === `/host/listedvans/${id}` ? "underline" : "none" }}>Details</li>
                         </NavLink>
