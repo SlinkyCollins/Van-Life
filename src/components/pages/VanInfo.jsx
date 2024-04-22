@@ -5,10 +5,16 @@ import { useLocation } from 'react-router-dom';
 import van1 from "../pages/van 2.png"
 import van2 from "../pages/van 7.png"
 import van3 from "../pages/van 5.png"
+import { useState, useEffect } from 'react';
 
 const VanInfo = () => {
     const { pathname } = useLocation();
     const { id } = useParams(); // Get the van ID from URL params
+
+    const [buttonStyles, setButtonStyles] = useState({
+        background: "rgba(225, 118, 84, 1)",
+        color: "#fff",
+    });
 
      // Array of van data
      const vansData = [
@@ -21,6 +27,22 @@ const VanInfo = () => {
 
      // Find the van object with the matching ID
      const van = vansData.find(van => van.id === id);
+
+     useEffect(() => {
+        let newButtonStyles = {...buttonStyles};
+
+        if (van.buttonTitle === "Simple") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#e17654";
+        } else if (van.buttonTitle === "Luxury") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#161616";
+        } else if (van.buttonTitle === "Rugged") {
+            newButtonStyles.color = "#ffead0";
+            newButtonStyles.background = "#115e59";
+        }
+        setButtonStyles(newButtonStyles);
+     }, [van.buttonTitle])
 
      if (!van) {
          return <div style={{padding: "5rem 2rem 15.74rem", textAlign: "left"}}>
@@ -46,6 +68,7 @@ const VanInfo = () => {
                     </div>
                     <div style={{ margin: "1.85rem 0" }}>
                         <button style={{
+                            ...buttonStyles,
                             outline: "none",
                             border: "none",
                             padding: "10px 25px",
@@ -54,8 +77,8 @@ const VanInfo = () => {
                             fontSize: "18px",
                             fontWeight: "600",
                             textAlign: "center",
-                            background: "rgba(225, 118, 84, 1)",
-                            color: "#fff",
+                            // background: "rgba(225, 118, 84, 1)",
+                            // color: "#fff",
                             marginBottom: "10px"
                         }}>{van.buttonTitle}</button>
                         <h1 style={{ fontSize: "1.625rem", fontWeight: "700", marginBottom: "8px" }}>{van.name}</h1>
