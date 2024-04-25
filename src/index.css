@@ -109,9 +109,9 @@ button {
 
 /* Mobile Devices */
 @media (min-width: 350px) and (max-width: 480.98px) {
-  body {
+  /* body {
     background-color: aqua;
-  }
+  } */
   /* .main-container .bg-image {
     height: 140vh !important;
   }  */
