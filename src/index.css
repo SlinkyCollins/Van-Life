@@ -102,9 +102,9 @@ button {
 
 /* Ipads, Tablets */
 @media (min-width: 481px) and (max-width: 768.99px) {
-  body {
+  /* body {
     background-color: violet;
-  }
+  } */
   .main-container .text-container {
     position: absolute;
     top: 90%;
@@ -206,7 +206,12 @@ button {
     font-size: 1.5rem !important;
     margin-bottom: 0.5rem !important;
   }
-  
+  .VanPhoto .VanPhotoWrapper img {
+    width: 26% !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .van-text {
+    margin: 0 !important;
+  }
 }
 
 /* Mobile Devices */
@@ -217,6 +222,10 @@ button {
   /* .main-container .bg-image {
     height: 140vh !important;
   }  */
+  .footer {
+    position: static !important;
+    bottom: 0 !important;
+  }
   .main-container .text-container {
     position: absolute;
     top: 90%;
