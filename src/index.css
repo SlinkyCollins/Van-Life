@@ -81,30 +81,30 @@ button {
 
 /* Extra large screens, TV */
 @media (min-width: 1201px) {
-  /* body {  
+  body {
     background-color: red;
-  } */
+  }
 }
 
 /* Desktops, large screens */
 @media (min-width: 1025px) and (max-width: 1200.99px) {
-  /* body {  
+  body {
     background-color: yellow;
-  } */
+  }
 }
 
 /* Small screens, laptops */
 @media (min-width: 769px) and (max-width: 1024.99px) {
-  /* body {  
+  body {
     background-color: green;
-  } */
+  }
 }
 
 /* Ipads, Tablets */
 @media (min-width: 481px) and (max-width: 768.99px) {
-  /* body {  
+  body {
     background-color: violet;
-  } */
+  }
 }
 
 /* Mobile Devices */
@@ -112,13 +112,15 @@ button {
   body {
     background-color: aqua;
   }
+  /* .main-container .bg-image {
+    height: 140vh !important;
+  }  */
   .main-container .text-container {
     position: absolute;
-    top: 100%;
-    left: 40%;
-    transform: translate(-50%, -65%);
+    top: 90%;
+    left: 50%;
     width: 100%;
-    padding: 12.5rem 0px 0px 5rem;
+    padding: 1.5rem !important;
   }
 
   .main-container .text-container h1 {
@@ -126,7 +128,7 @@ button {
     font-weight: 800;
     text-align: left;
     line-height: 5rem;
-    margin: 0 0 1.6rem;
+    margin: 0 0 2rem;
   }
 
   .main-container .text-container p {
@@ -134,20 +136,22 @@ button {
     font-weight: 500;
     line-height: 3.2rem;
     text-align: left;
-    margin: 0 0 1.6rem;
+    margin: 0 0 2.5rem;
   }
 
   .main-container .text-container button {
     width: 90%;
     max-width: 100%;
     padding: 1rem 1.6rem !important;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
+
   .aboutContainer .aboutTextContainer h1 {
     font-size: 3.5rem !important;
     line-height: 5rem !important;
   }
+
   .aboutContainer .aboutCard p {
     font-size: 2.3rem !important;
     line-height: 2.25rem !important;
@@ -167,26 +171,246 @@ button {
   .VansContainer .VanCardContainer {
     padding: 1rem 0rem 5rem 0rem !important;
   }
-  .signinWrapper .SignInheader {
-    font-size: 2rem !important;
+
+  .signinWrapper .signinlist {
+    display: none !important;
   }
-  .signupWrapper .formcontainer {
-    padding: 1.8rem 2.2rem 1.8rem !important;
+  .signinWrapper .signinform h1 {
+    font-size: 1.6rem !important;
+  }
+  .signinWrapper .signinform .createAcctPara {
+    font-size: 0.89rem !important;
+  }
+  .signinWrapper .signinform .createAcctPara span {
+    font-size: 0.89rem !important;
+  }
+  .signinWrapper .signinform .signinInputField div {
+    width: 89% !important;
+  }
+  .signinWrapper .signinform .signinInputField button {
+    width: 89% !important;
+    font-size: 1.3rem !important;
+    padding: 1rem 2rem !important;
+  }
+  .signupWrapper .signuplist {
+    display: none !important;
+  }
+  .signupWrapper .signupheader h1 {
+    font-size: 1.7rem !important;
   }
   .signupWrapper .formcontainer .signupform {
     padding: 1.5rem 2rem 1.5rem !important;
   }
-  .signupWrapper .signupheader h1 {
-    font-size: 1.5rem !important;
+  .signupWrapper .formcontainer .signupform .signupbutton {
+    font-size: 1.2rem !important;
+    padding: 0.8rem 3rem !important;
+  }
+  .signupWrapper .formcontainer .signupform .TandCWrapper p {
+    font-size: 0.85rem !important;
   }
   .navbar .list {
     display: none !important;
   }
+  .card-container .card-text-wrapper {
+    display: block !important;
+    margin: 1rem 0px 1rem !important;
+  }
+  .card-container .card-text-wrapper h1 {
+    margin: 0 0 0.4rem !important;
+    font-size: 0.99rem !important;
+  }
+  .card-container .card-text-wrapper .VanPriceCard {
+    flex-direction: row !important;
+    margin: 0 !important;
+  }
+  .card-container .card-text-wrapper .VanPriceCard .perDay {
+    margin: 0.29rem 0 0 0.156rem !important;
+  }
+  .card-container .card-text-wrapper .VanPriceCard .amount {
+    font-size: 1.18rem !important;
+  }
   .card-container {
+    /* width: 29rem !important; */
+    max-width: max-content !important;
     padding: 0 2rem 0 !important;
   }
+  .card-container .card-button {
+    padding: 0.27rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
   .card-container .image-wrapper img {
-    width: 14rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .VansContainer .VanCardContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 2rem 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .VansContainer .header {
+    font-size: 2.2rem !important;
+    margin: 60px 30px 40px 30px !important;
+  }
+  .VansContainer .navigation {
+    margin: 30px !important;
+  }
+  .VansContainer .navigation .buttonContainer {
+    margin-bottom: 1.8rem !important;
+  }
+  .VansContainer .navigation .buttonContainer .category-button {
+    padding: 0.6rem 2rem !important;
+  }
+  .vansoptioninfo-wrapper .title-header {
+    font-size: 1.8rem !important;
+  }
+  .footer {
+    padding: 2rem !important;
+  }
+  .host .navbar1 .list {
+    display: none !important;
+  }
+  .host .navbar2 {
+    position: static !important;
+    /* background: red !important; */
+    /* z-index: 0 !important; */
+    padding: 0 !important;
+  }
+  .host .navbar2 .list {
+    flex-direction: column !important;
+    text-align: left !important;
+    display: none !important;
+  }
+  .dashboard .details {
+    padding: 1.5rem !important;
+  }
+  .dashboard .details h1 {
+    font-size: 2rem !important;
+  }
+  .dashboard .details .amount {
+    font-size: 2.5rem !important;
+  }
+  .dashboard .review {
+    padding: 1rem 1.5rem !important;
+    display: block !important;
+  }
+  .dashboard .review p {
+    margin: 1rem 0 !important;
+  }
+  .dashboard .vans {
+    padding: 2rem 1.5rem 4rem !important;
+  }
+  .dashboard .vans .vansText h1 {
+    font-size: 1.25rem !important;
+  }
+  .listedVanComponent {
+    padding: 1rem 1rem 1rem 1rem !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc {
+    gap: 0.8rem !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc img {
+    width: 40% !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc .lvcText h1 {
+    font-size: 1rem !important;
+  }
+  .income .details {
+    padding: 2rem 2rem 2rem !important;
+  }
+  .income .details h1 {
+    font-size: 1.8rem !important;
+  }
+  .income .details .amount {
+    font-size: 2.5rem !important;
+  }
+  .income .transactions .text {
+    padding: 1.5rem !important;
+  }
+  .income .transactions .text h1 {
+    font-size: 1rem !important;
+  }
+  .income .transactions .text p,
+  .income .transactions .text span {
+    font-size: 0.8rem !important;
+  }
+  .income .transactions .cards {
+    padding: 1.5rem 1.5rem 3rem !important;
+  }
+  .income .transactions .cards .cards-text {
+    padding: 1rem !important;
+  }
+  .income .transactions .cards .amount {
+    font-size: 1.6rem !important;
+  }
+  .income .transactions .cards .date {
+    font-size: 1.1rem !important;
+  }
+  .ListedVans {
+    padding: 2rem 2rem 4rem !important;
+  }
+  .ListedVans .VanWrapper {
+    padding: 1.1rem 0.6rem 1.1rem 1.1rem !important;
+  }
+  .ListedVans .innerVanWrapper .van-content img {
+    width: 40% !important;
+  }
+  .ListedVans .innerVanWrapper .van-content .van-text h1 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .vanInfo .van-body .vanInfoNav ul {
+    gap: 1rem !important;
+    padding: 1rem 0 1.5rem !important;
+  }
+  .vanInfo .van-body .vanInfoNav ul li {
+    font-size: 1rem !important;
+  }
+  .vanInfo .van-body {
+    margin: 3rem 0 2rem !important;
+    padding: 1.3rem 1rem 1.5rem !important;
+  }
+  .vanInfo .van-body .van-body-wrapper {
+    flex-direction: column !important;
+    gap: 0rem !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .vanImageWrapper {
+    text-align: center !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .vanImageWrapper img {
+    width: 95% !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .van-text {
+    margin: 1rem 0 !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .van-text button {
+    padding: 5px 10px !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .van-text h1 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.78rem !important;
+  }
+  .vanInfo .van-body .van-body-wrapper .van-text p {
+    font-size: 1rem !important;
+  }
+  .VanPhoto .VanPhotoWrapper img {
+    width: 30% !important;
+  }
+  .reviews .reviewText {
+    padding: 2rem 1.5rem 2rem 1.5rem !important;
+  }
+  .reviews .reviewText h1 {
+    font-size: 1.5rem !important;
+  }
+  .reviews .reviewText p {
+    font-size: 0.8rem !important;
+  }
+  .reviews .reviewText p span {
+    font-size: 0.8rem !important;
   }
 }
 
@@ -411,8 +635,9 @@ button {
   .income .transactions .text h1 {
     font-size: 1rem !important;
   }
-  .income .transactions .text p, .income .transactions .text span {
-    font-size: .8rem !important;
+  .income .transactions .text p,
+  .income .transactions .text span {
+    font-size: 0.8rem !important;
   }
   .income .transactions .cards {
     padding: 1.5rem 1.5rem 3rem !important;
@@ -437,7 +662,7 @@ button {
   }
   .ListedVans .innerVanWrapper .van-content .van-text h1 {
     font-size: 1rem !important;
-    margin-bottom: .5rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .vanInfo .van-body .vanInfoNav ul {
     gap: 1rem !important;
@@ -460,17 +685,17 @@ button {
   .vanInfo .van-body .van-body-wrapper .vanImageWrapper img {
     width: 95% !important;
   }
-  .vanInfo .van-body .van-body-wrapper .van-text{
+  .vanInfo .van-body .van-body-wrapper .van-text {
     margin: 1rem 0 !important;
   }
   .vanInfo .van-body .van-body-wrapper .van-text button {
     padding: 5px 10px !important;
-    font-size: .9rem !important;
+    font-size: 0.9rem !important;
     margin-bottom: 1rem !important;
   }
   .vanInfo .van-body .van-body-wrapper .van-text h1 {
     font-size: 1.2rem !important;
-    margin-bottom: .78rem !important;
+    margin-bottom: 0.78rem !important;
   }
   .vanInfo .van-body .van-body-wrapper .van-text p {
     font-size: 1rem !important;
@@ -485,9 +710,9 @@ button {
     font-size: 1.5rem !important;
   }
   .reviews .reviewText p {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
   .reviews .reviewText p span {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
 }
