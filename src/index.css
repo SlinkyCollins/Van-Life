@@ -105,6 +105,108 @@ button {
   body {
     background-color: violet;
   }
+  .main-container .text-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    padding: 2rem !important;
+  }
+  .main-container .bg-image {
+    height: 160vh !important;
+  } 
+  .main-container .text-container h1 {
+    font-size: 4.5rem;
+    text-align: left;
+    line-height: 5rem;
+    margin: 0 0 2.5rem;
+  }
+  .main-container .text-container p {
+    font-size: 1.5875rem;
+    /* line-height: 3.2rem; */
+    text-align: left;
+    margin: 0 0 4rem;
+  }
+  .main-container .text-container button {
+    width: 100%;
+    padding: 1.5rem 3rem !important;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .aboutContainer .aboutTextContainer h1 {
+    font-size: 3rem !important;
+  }
+  .aboutContainer .aboutCard  {
+    padding: 8% !important;
+  }
+  .aboutContainer .aboutCard p {
+    font-size: 2.3rem !important;
+    line-height: 3.25rem !important;
+  }
+  .aboutContainer .aboutCard button {
+    padding: 1.3rem 2.6rem !important;
+    font-size: 1.5rem !important;
+    margin: 4rem 0 0 !important;
+    width: 100%;
+  }
+  .VansContainer .header {
+    font-size: 3rem !important;
+    margin-top: 5rem !important;
+  }
+  .VansContainer .navigation .buttonContainer {
+    margin-bottom: 2rem !important;
+  }
+  .VansContainer .VanCardContainer {
+    padding-top: 2rem !important;
+  }
+  .signinWrapper .signinform h1 {
+    font-size: 2.5rem !important;
+  }
+  .signupWrapper .signupheader h1 {
+    font-size: 1.89rem !important;
+  }
+  .signupWrapper .formcontainer .signupform {
+    padding: 1rem 2.2rem 1.6rem !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc {
+    gap: 0.8rem !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc img {
+    width: 25% !important;
+  }
+  .listedVanComponent .lvc-wrapper .innerLvc .lvcText h1 {
+    font-size: 1.2rem !important;
+  }
+  .dashboard .details {
+    padding: 2rem !important;
+  }
+  .dashboard .details h1 {
+    font-size: 2rem !important;
+  }
+  .income .transactions .text h1 {
+    font-size: 1.5rem !important;
+  }
+  .income .transactions .text p,
+  .income .transactions .text span {
+    font-size: 0.9rem !important;
+  }
+  .income .transactions .cards .cards-text {
+    padding: 1.5rem !important;
+  }
+  .income .transactions .cards .amount {
+    font-size: 1.8rem !important;
+  }
+  .income .transactions .cards .date {
+    font-size: 1.3rem !important;
+  }
+  .ListedVans .innerVanWrapper .van-content img {
+    width: 25% !important;
+  }
+  .ListedVans .innerVanWrapper .van-content .van-text h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
 }
 
 /* Mobile Devices */
@@ -147,18 +249,25 @@ button {
     font-weight: 700;
   }
 
+  .aboutContainer .aboutTextContainer  {
+    padding: 2rem !important;
+  }
+
   .aboutContainer .aboutTextContainer h1 {
-    font-size: 3.5rem !important;
+    font-size: 2.5rem !important;
     line-height: 5rem !important;
   }
 
+  .aboutContainer .aboutCard {
+    margin: 30px 30px 80px 30px !important;
+  }
+
   .aboutContainer .aboutCard p {
-    font-size: 2.3rem !important;
-    line-height: 2.25rem !important;
+    font-size: 1.7rem !important;
   }
   .aboutContainer .aboutCard button {
-    padding: 1.1rem 2.2rem !important;
-    font-size: 1.5rem !important;
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
     margin: 4rem 0 0 !important;
   }
   .VansContainer .header {

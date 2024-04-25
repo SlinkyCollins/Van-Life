@@ -89,7 +89,7 @@ const Signin = () => {
                     </div>
                     <button style={{ background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", color: "rgba(255, 255, 255, 1)", fontSize: "1.2rem", fontWeight: "700", padding: "1.5rem 3rem", width: "80%", borderRadius: "10px", margin: "0 0 4.5rem 0" }}>Sign in</button>
                 </div>
-                <p className="createAcctPara" style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "500", padding: "0 0 4rem" }}>Dont have an account? <span style={{ fontSize: "1.1rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  " }}><Link to="/signup" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Create one now</Link></span></p>
+                <p className="createAcctPara" style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "500", padding: "0 0 4rem" }}>Don&#39;t have an account? <span style={{ fontSize: "1.1rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  " }}><Link to="/signup" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Create one now</Link></span></p>
             </form>
 
         </div>
