@@ -266,9 +266,9 @@ button {
   .vansoptioninfo-wrapper .title-header {
     font-size: 1.8rem !important;
   }
-  .footer {
+  /* .footer {
     padding: 2rem !important;
-  }
+  } */
   .host .navbar1 .list {
     display: none !important;
   }
@@ -416,7 +416,7 @@ button {
 
 @media (max-width: 349.98px) {
   body {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     overflow-x: hidden !important;
   }
   .navbar .list {
