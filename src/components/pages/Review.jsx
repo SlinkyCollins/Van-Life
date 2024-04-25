@@ -3,8 +3,8 @@ import star from "../pages/star.png"
 
 const Review = () => {
   return (
-    <div>
-      <div style={{ display: "flex", alignItems: "center", padding: "2rem", gap: "1.5rem" }}>
+    <div className="reviews">
+      <div className="reviewText" style={{ display: "flex", alignItems: "center",justifyContent: "space-between", padding: "2rem"}}>
         <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>Your reviews</h1>
         <p style={{ fontSize: "16px", fontWeight: "500", color: "rgba(77, 77, 77, 1)", margin: "0.6rem 0 0" }}>last <span style={{ textDecoration: "underline", fontSize: "1rem", fontWeight: "700" }}>30 days</span></p>
       </div>

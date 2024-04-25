@@ -78,7 +78,7 @@ const Vans = () => {
   };
 
   return (
-    <div>
+    <div className="VansContainer">
       <Navbar />
       <h1 className="header">Explore our van options</h1>
       <div className="navigation">
@@ -123,12 +123,13 @@ const Vans = () => {
       </div>
 
       <div
+      className="VanCardContainer"
         style=
         {{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
           gridGap: "2rem",
-          margin: "80px 50px 80px 50px"
+          padding: "5rem 3.25rem 5rem 3.25rem"
         }}>
         {filteredVans.map((van) => (
           <Link key={van.id} to={`/vans/${van.id}`} style={{textDecoration: "none", color: "inherit"}}>

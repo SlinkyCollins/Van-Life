@@ -14,16 +14,16 @@ const Listedvans = () => {
     // Add more van objects as needed
   ];
   return (
-    <div style={{ padding: "3rem 2rem 8rem" }}>
-      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+    <div className="ListedVans" style={{ padding: "3rem 2rem 8rem" }}>
+      <div className="myVans" style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
         {vansData.map((van) => (
-          <div key={van.id}>
+          <div className="innerVanDiv" key={van.id}>
             <Link to={`/host/listedvans/${van.id}`} style={{textDecoration: "none", color: "#000"}}>
-              <div style={{ background: "#fff", padding: "2rem", borderRadius: "0.4rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+              <div className="VanWrapper" style={{ background: "#fff", padding: "2rem", borderRadius: "0.4rem" }}>
+                <div className="innerVanWrapper" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div className="van-content" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
                     <img src={van.imageLink} alt="" style={{ width: "10%", borderRadius: "0.2rem", objectFit: "cover" }} />
-                    <div>
+                    <div className="van-text">
                       <h1 style={{ fontSize: "1.6rem", fontWeight: "600", marginBottom: "0.5rem" }}>{van.name}</h1>
                       <p style={{ color: "rgba(77, 77, 77, 1)" }}>${van.price}/day</p>
                     </div>

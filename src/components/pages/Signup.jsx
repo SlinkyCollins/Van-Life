@@ -31,7 +31,7 @@ const Signup = () => {
     };
 
     return (
-        <div style={{ background: "rgba(255, 247, 237, 1)" }}>
+        <div className="signupWrapper" style={{ background: "rgba(255, 247, 237, 1)" }}>
             <nav style={{ background: "#FFF7ED", padding: "30px", zIndex: "1000", width: "100%", userSelect: "none" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <div>
@@ -39,7 +39,7 @@ const Signup = () => {
                             <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#000" }}>#VANLIFE</Link>
                         </h1>
                     </div>
-                    <ul style={{ display: "flex", gap: "40px" }}>
+                    <ul className="signuplist" style={{ display: "flex", gap: "40px" }}>
                         <li style={{ listStyleType: "none" }}>
                             <NavLink
                                 to="/host"
@@ -104,14 +104,14 @@ const Signup = () => {
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav>  
 
-            <div style={{ textAlign: "center", marginTop: "1rem" }}>
+            <div className="signupheader" style={{ textAlign: "center", marginTop: "1rem" }}>
                 <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>Sign up for an account</h1>
             </div>
-            <div className="formcontainer" style={{ maxWidth: "40rem", margin: "0 auto", padding: "2.5rem 0 4rem" }}>
+            <div className="formcontainer" style={{ maxWidth: "40rem", margin: "0 auto", padding: "2.5rem 1rem 4rem" }}>
                 <div style={{ boxShadow: "0 0px 0.1875rem 0 rgba(0, 0, 0, 0.15)", borderRadius: "10px" }}>
-                    <form style={{ padding: "2.125rem 3.125rem 2.125rem" }}>
+                    <form className="signupform" style={{ padding: "2.125rem 3.125rem 2.125rem" }}>
                         <div style={{ display: 'flex', flexDirection: "column", padding: ".75rem 0" }}>
                             <label htmlFor="firstName" style={{ marginBottom: ".4rem", fontSize: ".88rem", fontWeight: "400", color: "#595863" }}>First Name</label>
                             <div style={{ position: "relative" }}>
@@ -159,11 +159,11 @@ const Signup = () => {
                                 <span onClick={toggleConfirmPasswordVisibility} style={{ position: "absolute", top: "0", right: "0", color: "#6b7280", padding: "6px 15px 0px 0px", cursor: "pointer" }} title="Toggle password">{confirmPasswordVisible ? <VisibilityOffIcon style={{ fontSize: "1.34rem" }} /> : <VisibilityIcon style={{ fontSize: "1.32rem" }} />}</span>
                             </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: "row", padding: "1rem 0 1.5rem", gap: ".3rem" }}>
+                        <div className="TandCWrapper" style={{ display: 'flex', flexDirection: "row", padding: "1rem 0 1.5rem", gap: ".3rem" }}>
                             <input type="checkbox" />
                             <p style={{ fontSize: ".85rem" }}>I accept the <span style={{ color: "rgba(255, 140, 56, 1)" }}>Terms</span> and <span style={{ color: "rgba(255, 140, 56, 1)" }}>Conditions</span></p>
                         </div>
-                        <button style={{ textAlign: "center", background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", padding: "1rem 5rem", width: "100%", borderRadius: "5px", color: "#fff", fontSize: "1.1rem", fontWeight: "600" }}>Sign Up</button>
+                        <button className="signupbutton" style={{ textAlign: "center", background: "rgba(255, 140, 56, 1)", outline: "none", border: "none", padding: "1rem 5rem", width: "100%", borderRadius: "5px", color: "#fff", fontSize: "1.1rem", fontWeight: "600" }}>Sign Up</button>
                         <p style={{ textAlign: "center", fontSize: ".8rem", fontWeight: "500", padding: "1.8rem 0 0" }}>Already have an account? <span style={{ fontSize: ".8rem", fontWeight: "700", color: "rgba(255, 140, 56, 1)", cursor: "pointer  " }}><Link to="/signin" style={{ textDecoration: "none", cursor: "pointer", color: "rgba(255, 140, 56, 1)" }}>Sign In</Link></span></p>
                     </form>
                 </div>

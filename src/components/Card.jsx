@@ -24,18 +24,18 @@ const Card = ({ imageUrl, title, price, type }) => {
   }, [type]);
 
   return (
-    <div title="Click to view details" style={{ overflow: "hidden", margin: "30px 0px", maxWidth: "30rem" }}>
-      <div style={{}}>
+    <div className='card-container' title="Click to view details" style={{ overflow: "hidden", margin: "30px 0px", maxWidth: "100%" }}>
+      <div className='image-wrapper' style={{}}>
         <img src={imageUrl} style={{width: "100%", height: "350px", objectFit: "cover", borderRadius: "10px" }} />
       </div>
-      <div style={{ display: "flex", margin: "10px 0px 0px", justifyContent: "space-between" }}>
+      <div className='card-text-wrapper' style={{ display: "flex", margin: "10px 0px 0px", justifyContent: "space-between" }}>
         <h1 style={{ fontSize: "24px", fontWeight: "800" }}>{title}</h1>
-        <div style={{ display: "flex", flexDirection: "column", margin: "0px 15px 0px 0px" }}>
-          <div style={{ fontSize: "20px", fontWeight: "600" }}>{price}</div>
-          <div style={{ fontSize: "14px", fontWeight: "500", marginLeft: "8px" }}>/day</div>
+        <div className='VanPriceCard' style={{ display: "flex", flexDirection: "column", margin: "0px 15px 0px 0px" }}>
+          <div className='amount' style={{ fontSize: "20px", fontWeight: "600" }}>{price}</div>
+          <div className='perDay' style={{ fontSize: "14px", fontWeight: "500", marginLeft: "8px" }}>/day</div>
         </div>
       </div>
-      <button
+      <button className='card-button'
         style={{
           ...buttonStyles,
           outline: "none",

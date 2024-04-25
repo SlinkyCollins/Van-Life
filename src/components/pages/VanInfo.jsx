@@ -53,7 +53,7 @@ const VanInfo = () => {
 
     return (
 
-        <div style={{ padding: "2rem" }}>
+        <div className='vanInfo' style={{ padding: "2rem" }}>
             <Link to="/host/listedvans" style={{ color: "#000", textDecoration: "none" }}>
                 <div>
                     <span style={{ color: "rgba(133, 133, 133, 1)" }}>← </span>
@@ -61,12 +61,12 @@ const VanInfo = () => {
                 </div>
             </Link>
 
-            <div style={{ background: "rgba(255, 255, 255, 1)", padding: "2rem", margin: "3rem 0 3rem", borderRadius: "5px" }}>
-                <div style={{ display: "flex", gap: "2.2rem", flexWrap: "wrap" }}>
-                    <div>
+            <div className='van-body' style={{ background: "rgba(255, 255, 255, 1)", padding: "2rem", margin: "3rem 0 3rem", borderRadius: "5px" }}>
+                <div className='van-body-wrapper' style={{ display: "flex", gap: "2.2rem", flexWrap: "wrap" }}>
+                    <div className='vanImageWrapper'>
                         <img src={van.imageLink} style={{ width: "16rem", borderRadius: "2px" }} />
                     </div>
-                    <div style={{ margin: "1.85rem 0" }}>
+                    <div className='van-text' style={{ margin: "1.85rem 0" }}>
                         <button style={{
                             ...buttonStyles,
                             outline: "none",
@@ -86,8 +86,8 @@ const VanInfo = () => {
                     </div>
                 </div>
 
-                <nav>
-                    <ul style={{ listStyleType: "none", display: "flex", gap: "3.8rem", padding: "1.5rem 0rem 2rem" }}>
+                <nav className='vanInfoNav'>
+                    <ul style={{ listStyleType: "none", display: "flex", flexWrap: "wrap", gap: "3.8rem", padding: "1.5rem 0rem 2rem" }}>
                         <NavLink to={`/host/listedvans/${id}`} style={{ textDecoration: "none" }}>
                             <li style={{ color: pathname === `/host/listedvans/${id}` ? "rgba(22, 22, 22, 1)" : "rgba(77, 77, 77, 1)", fontSize: "1.15rem", fontWeight: pathname === `/host/listedvans/${id}` ? "700" : "500", cursor: "pointer", textDecoration: pathname === `/host/listedvans/${id}` ? "underline" : "none" }}>Details</li>
                         </NavLink>

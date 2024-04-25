@@ -6,14 +6,14 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav style={{ background: "#FFF7ED", padding: "30px", position: "sticky", top: "0", left: "0", zIndex: "1000", width: "100%", userSelect: "none" }}>
+    <nav className="navbar" style={{ background: "#FFF7ED", padding: "30px", position: "sticky", top: "0", left: "0", zIndex: "1000", width: "100%", userSelect: "none" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <h1 style={{ fontSize: "25px", fontWeight: "900" }}>
             <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#000" }}>#VANLIFE</Link>
           </h1>
         </div>
-        <ul style={{ display: "flex", gap: "40px" }}>
+        <ul className="list" style={{ display: "flex", gap: "40px" }}>
           <li style={{ listStyleType: "none" }}>
             <NavLink
               to="/about"

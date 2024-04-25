@@ -37,8 +37,8 @@ const VanPhoto = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="VanPhoto">
+      <div className="VanPhotoWrapper">
         <img src={van.imageUrl} alt="" style={{ width: "10%", cursor: "pointer" }} onClick={() => handleImageClick(van.imageUrl)} />
       </div>
 

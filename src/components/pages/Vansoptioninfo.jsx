@@ -88,20 +88,20 @@ const Vansoptioninfo = () => {
         setButtonStyles(newButtonStyles);
     }, [van.type]);
 
-    if (!van) {
-        return <div>
-            <Navbar />
-            <div style={{ padding: "5rem 2rem 21.13rem", textAlign: "left" }}>
-                <p style={{ marginBottom: "2rem", fontWeight: "400", fontSize: "2rem" }}>No van found with ID: <span style={{ color: "red", fontWeight: "600" }}>{id}</span></p>
-                <Link to="/vans"><button style={{ padding: ".5rem 2rem", fontSize: "1rem" }}>Go back</button></Link>
-            </div>
-        </div>;
-    }
+    // if (!van) {
+    //     return <div>
+    //         <Navbar />
+    //         <div style={{ padding: "5rem 2rem 21.13rem", textAlign: "left" }}>
+    //             <p style={{ marginBottom: "2rem", fontWeight: "400", fontSize: "2rem" }}>No van found with ID: <span style={{ color: "red", fontWeight: "600" }}>{id}</span></p>
+    //             <Link to="/vans"><button style={{ padding: ".5rem 2rem", fontSize: "1rem" }}>Go back</button></Link>
+    //         </div>
+    //     </div>;
+    // }
 
     return (
-        <div style={{ background: "rgba(255, 247, 237, 1)" }}>
+        <div className='vansoptioninfo-wrapper' style={{ background: "rgba(255, 247, 237, 1)" }}>
             <Navbar />
-            <div style={{ padding: "5rem 2rem 2rem 2rem" }}>
+            <div style={{ padding: "4.5rem 2rem 2rem 2rem" }}>
                 <Link to="/vans" style={{ color: "#000", textDecoration: "none" }}>
                     <div style={{ textAlign: "left" }}>
                         <span style={{ color: "rgba(133, 133, 133, 1)" }}>← </span>
@@ -130,7 +130,7 @@ const Vansoptioninfo = () => {
                             }}>
                             {van.type}
                         </button>
-                        <h2 style={{ fontWeight: "700", fontSize: "2.5rem" }}>{van.title}</h2>
+                        <h2 className= 'title-header' style={{ fontWeight: "700", fontSize: "2.5rem" }}>{van.title}</h2>
                         <p style={{ margin: "1rem 0 1rem", fontWeight: "700", fontSize: "1.3rem" }}>{van.price}<span style={{ fontWeight: "500", fontSize: "1.1rem" }}>/day</span></p>
                         <div style={{ width: "100%" }}>
                             <p style={{ fontWeight: "500", fontSize: "1rem", lineHeight: "1.4375rem" }}>{van.details}</p>
