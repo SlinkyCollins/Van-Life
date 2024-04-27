@@ -79,25 +79,33 @@ button {
   cursor: pointer;
 }
 
+.hamburgerMenu {
+  display: none;
+}
+
+/* .close-button:hover {
+  color: red !important;
+} */
+
 /* Extra large screens, TV */
 @media (min-width: 1201px) {
-  body {
+  /* body {
     background-color: red;
-  }
+  } */
 }
 
 /* Desktops, large screens */
 @media (min-width: 1025px) and (max-width: 1200.99px) {
-  body {
+  /* body {
     background-color: yellow;
-  }
+  } */
 }
 
 /* Small screens, laptops */
 @media (min-width: 769px) and (max-width: 1024.99px) {
-  body {
+  /* body {
     background-color: green;
-  }
+  } */
 }
 
 /* Ipads, Tablets */
@@ -530,6 +538,9 @@ button {
   .reviews .reviewText p span {
     font-size: 0.8rem !important;
   }
+  .hamburgerMenu {
+    display: block !important;
+  }
 }
 
 @media (max-width: 349.98px) {
@@ -832,5 +843,8 @@ button {
   }
   .reviews .reviewText p span {
     font-size: 0.8rem !important;
+  }
+  .hamburgerMenu {
+    display: block !important;
   }
 }

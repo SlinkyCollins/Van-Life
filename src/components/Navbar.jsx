@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "../components/Navbar.css";
 import { CgProfile } from "react-icons/cg";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -60,6 +61,9 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
+        <div className="hamburgerMenu">
+          <HamburgerMenu/>
+        </div>
       </div>
     </nav>
   );

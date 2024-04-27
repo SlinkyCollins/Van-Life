@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import HamburgerMenu from "../HamburgerMenu";
 
 const Signin = () => {
     const { pathname } = useLocation();
@@ -11,6 +12,9 @@ const Signin = () => {
                         <h1 style={{ fontSize: "25px", fontWeight: "900" }}>
                             <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#000" }}>#VANLIFE</Link>
                         </h1>
+                    </div>
+                    <div className="hamburgerMenu">
+                            <HamburgerMenu />
                     </div>
                     <ul className="signinlist" style={{ display: "flex", gap: "40px" }}>
                         <li style={{ listStyleType: "none" }}>
@@ -80,7 +84,7 @@ const Signin = () => {
             </nav>
 
             <form className='signinform' style={{ margin: "0" }}>
-                <h1 className= "SignInheader" style={{ fontWeight: "700", fontSize: "3.2rem", textAlign: "center", padding: "3rem 2rem 4rem" }}>Sign in to your account</h1>
+                <h1 className="SignInheader" style={{ fontWeight: "700", fontSize: "3.2rem", textAlign: "center", padding: "3rem 2rem 4rem" }}>Sign in to your account</h1>
                 <div className="signinInputField" style={{ textAlign: "center" }}>
                     <div style={{ display: "flex", flexDirection: "column", width: "80%", margin: "0 auto", paddingBottom: "1rem" }}>
                         <input type="email" placeholder="Email Address" style={{ border: "1px solid rgba(209, 213, 219, 1)", padding: "1.2rem", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", fontSize: "1rem", fontWeight: "400", outline: "none" }} />
