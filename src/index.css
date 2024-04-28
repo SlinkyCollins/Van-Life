@@ -83,6 +83,10 @@ button {
   display: none;
 }
 
+.signinWrapper {
+  height: 100vh !important;
+}
+
 /* .close-button:hover {
   color: red !important;
 } */
@@ -540,6 +544,7 @@ button {
   }
   .hamburgerMenu {
     display: block !important;
+    z-index: 200 !important;
   }
 }
 
@@ -846,5 +851,6 @@ button {
   }
   .hamburgerMenu {
     display: block !important;
+    z-index: 200 !important;
   }
 }

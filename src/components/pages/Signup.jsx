@@ -6,6 +6,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import { useState } from "react";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import HamburgerMenu from "../HamburgerMenu";
 
 const Signup = () => {
     const { pathname } = useLocation();
@@ -38,6 +39,9 @@ const Signup = () => {
                         <h1 style={{ fontSize: "25px", fontWeight: "900" }}>
                             <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#000" }}>#VANLIFE</Link>
                         </h1>
+                    </div>
+                    <div className="hamburgerMenu">
+                            <HamburgerMenu />
                     </div>
                     <ul className="signuplist" style={{ display: "flex", gap: "40px" }}>
                         <li style={{ listStyleType: "none" }}>

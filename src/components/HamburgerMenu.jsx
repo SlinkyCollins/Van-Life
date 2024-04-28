@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './HamburgerMenu.css'; // Import CSS for styling (create this file)
 import { NavLink } from "react-router-dom";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const HamburgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,60 +42,13 @@ const HamburgerMenu = () => {
                         Vans
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        to="/host"
-                        style={{
-                            textDecoration: 'none',
-                            color: "#000"
-                        }}
-                    >
-                        Host
-                    </NavLink>
-                    <ul>
-                        <li style={{listStyle: "none"}}>
-                            <NavLink to="/host"
-                            style={{
-                                textDecoration: 'none',
-                                color: "#000"
-                            }}
-                            >
-                                Dashboard
-                            </NavLink>
-                        </li>
-                        <li style={{listStyle: "none"}}>
-                            <NavLink
-                                to="/host/income"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: "#000"
-                                }}
-                                >
-                                Income
-                            </NavLink>
-                        </li>
-                        <li style={{listStyle: "none"}}>
-                            <NavLink
-                                to="listedvans"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: "#000"
-                                }}
-                                >
-                                Vans
-                            </NavLink>
-                        </li>
-                        <li style={{listStyle: "none"}}>
-                            <NavLink
-                                to="/host/reviews"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: "#000"
-                                }}
-                                >
-                                Reviews
-                            </NavLink>
-                        </li>
+                <li className="dropdown">
+                    <NavLink to="/host" style={{ textDecoration: 'none', color: "#000" }}>Host <ArrowDropDownIcon/></NavLink>
+                    <ul className="dropdown-content">
+                        <li style={{listStyle: "none"}}><NavLink to="/host" style={{ textDecoration: 'none', color: "#000" }}>Dashboard</NavLink></li>
+                        <li style={{listStyle: "none"}}><NavLink to="/host/income" style={{ textDecoration: 'none', color: "#000" }}>Income</NavLink></li>
+                        <li style={{listStyle: "none"}}><NavLink to="listedvans" style={{ textDecoration: 'none', color: "#000" }}>Vans</NavLink></li>
+                        <li style={{listStyle: "none"}}><NavLink to="/host/reviews" style={{ textDecoration: 'none', color: "#000" }}>Reviews</NavLink></li>
                     </ul>
                 </li>
                 <li>
@@ -110,7 +64,7 @@ const HamburgerMenu = () => {
                         to="/signin"
                         style={{ textDecoration: 'none', color: "orange" }}
                     >
-                        Sign In
+                        Log In
                     </NavLink>
                 </li>
             </ul>
