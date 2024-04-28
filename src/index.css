@@ -96,16 +96,16 @@ button {
 
 /* Desktops, large screens */
 @media (min-width: 1025px) and (max-width: 1200.99px) {
-  /* body {
+  body {
     background-color: yellow;
-  } */
+  }
 }
 
 /* Small screens, laptops */
 @media (min-width: 769px) and (max-width: 1024.99px) {
-  /* body {
+  body {
     background-color: green;
-  } */
+  }
 }
 
 /* Ipads, Tablets */

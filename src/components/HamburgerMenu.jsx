@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './HamburgerMenu.css'; // Import CSS for styling (create this file)
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HamburgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,30 +17,102 @@ const HamburgerMenu = () => {
                 <div className="line"></div>
             </button>
             <ul className={`menu ${isOpen ? 'open' : 'close'}`}>
-                <li> 
-                <NavLink
-                to="/about"
-                style={{textDecoration: 'none', color: "#000"}}
-                >
-                About
-                </NavLink></li>
                 <li>
-                <NavLink
-                to="/vans"
-                style={{textDecoration: 'none', color: "#000"}}
-                >
-                Vans
-                </NavLink>
+                    <NavLink
+                        to="/"
+                        style={{ textDecoration: 'none', color: "#000" }}
+                    >
+                        Home
+                    </NavLink>
                 </li>
                 <li>
-                <NavLink
-                to="/signin"
-                style={{textDecoration: 'none', color: "orange"}}
-                >
-                Sign In
-                </NavLink>
+                    <NavLink
+                        to="/about"
+                        style={{ textDecoration: 'none', color: "#000" }}
+                    >
+                        About
+                    </NavLink>
                 </li>
-                {/* Add more menu items as needed */}
+                <li>
+                    <NavLink
+                        to="/vans"
+                        style={{ textDecoration: 'none', color: "#000" }}
+                    >
+                        Vans
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/host"
+                        style={{
+                            textDecoration: 'none',
+                            color: "#000"
+                        }}
+                    >
+                        Host
+                    </NavLink>
+                    <ul>
+                        <li style={{listStyle: "none"}}>
+                            <NavLink to="/host"
+                            style={{
+                                textDecoration: 'none',
+                                color: "#000"
+                            }}
+                            >
+                                Dashboard
+                            </NavLink>
+                        </li>
+                        <li style={{listStyle: "none"}}>
+                            <NavLink
+                                to="/host/income"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: "#000"
+                                }}
+                                >
+                                Income
+                            </NavLink>
+                        </li>
+                        <li style={{listStyle: "none"}}>
+                            <NavLink
+                                to="listedvans"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: "#000"
+                                }}
+                                >
+                                Vans
+                            </NavLink>
+                        </li>
+                        <li style={{listStyle: "none"}}>
+                            <NavLink
+                                to="/host/reviews"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: "#000"
+                                }}
+                                >
+                                Reviews
+                            </NavLink>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <NavLink
+                        to="/signup"
+                        style={{ textDecoration: 'none', color: "#000" }}
+                    >
+                        Sign Up
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/signin"
+                        style={{ textDecoration: 'none', color: "orange" }}
+                    >
+                        Sign In
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );
