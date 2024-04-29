@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './HamburgerMenu.css'; // Import CSS for styling (create this file)
 import { NavLink } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -56,7 +56,7 @@ const HamburgerMenu = () => {
                         to="/signup"
                         style={{ textDecoration: 'none', color: "#000" }}
                     >
-                        Sign Up
+                        Sign up
                     </NavLink>
                 </li>
                 <li>

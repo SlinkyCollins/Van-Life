@@ -33,40 +33,63 @@
 .open .line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
-
-.close {
-  display: none;
-}
-
+/*
 .menu {
   list-style: none;
-  padding: 15% 0 0;
-  margin: 0;
+  margin: 5.8rem .2rem 0 0;
+  border-radius: 10px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -55%; Adjust the percentage to ensure it's completely off-screen 
+  text-align: center;
   width: 50%;
-  /* height: 100vh; */
   background-color: #fff7ed;
-  /* opacity: 0 !important; Initially invisible */
-  /* pointer-events: none; Initially not clickable */
-  transition: top padding 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .menu.open {
   right: 0;
-  /* opacity: 1 !important; Fade in */
-  /* pointer-events: auto; Enable clicking */
+}*/
+
+.menu {
+  list-style: none;
+  margin: .3rem .3rem 0 0;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  text-align: center;
+  width: 50%;
+  background-color: #fff7ed;
+  transition: transform .3s ease; /* Adjust the duration and timing function */
+  transform: translateY(-100%); /* Initially move the menu off-screen vertically */
 }
+
+.menu.open {
+  transform: translateY(0); /* Move the menu on-screen vertically */
+}
+
+
+.close {
+  visibility: hidden;
+}
+
+/* transition: transform .3s ease; /* Transition the transform property */
+/* transform: translateY(-100%); Initially move the menu off-screen vertically */
+/* transform: translateY(0); Move the menu on-screen vertically */
+
 
 .menu li {
   padding: 1.2rem;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
 }
 
 .menu li:hover {
   background-color: #f5f5f5;
+  border-radius: 10px;
 }
 
 .dropdown-content {
