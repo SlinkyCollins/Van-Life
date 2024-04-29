@@ -11,45 +11,13 @@ html {
 body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-  /* max-width: 2000px !important;
-  margin: 0 auto; */
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 button {
   cursor: pointer;
 }
-
-/* .text-active {
-    font-weight: 700;
-    color: lightblue;
-} */
-
-/* 
-.navlink:active {
-    text-decoration: wavy !important;
-} */
-
-/* .navlink > li:hover {
-    color: blue !important;
-}
-
-.navlink > li:focus {
-    color: pink !important;
-}
-
-.navlink > li:link {
-    color: gold !important;
-}
-
-.navlink > li:visited {
-    color: purple !important;
-} */
-
-/* @media (min-width: 1800px) {
-    body {
-        background: red;
-    }
-} */
 
 .fullscreen-image {
   position: fixed;
@@ -88,8 +56,42 @@ button {
 }
 
 /* .close-button:hover {
-  color: red !important;
+  color: white !important;
 } */
+
+/* 4k large screens, TV */
+@media (min-width: 1499px) {
+  /* body {
+    background-color: rebeccapurple;
+  } */
+  .footer {
+    padding: 2.5rem !important;
+    /* margin: 5rem 0 0 !important; */
+  }
+  .main-container .text-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 60%;
+    /* padding: 4rem !important; */
+  }
+  .main-container .text-container h1 {
+    font-size: 6.5rem;
+    text-align: left;
+    line-height: 8rem;
+    margin: 0 0 3rem;
+  }
+  .main-container .text-container p {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 0 6.5rem;
+  }
+  .main-container .text-container button {
+    width: 90%;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
 
 /* Extra large screens, TV */
 @media (min-width: 1201px) {
@@ -100,15 +102,71 @@ button {
 
 /* Desktops, large screens */
 @media (min-width: 1025px) and (max-width: 1200.99px) {
-  body {
+  /* body {
     background-color: yellow;
+  } */
+  .main-container .text-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    padding: 4rem !important;
+  }
+  .main-container .text-container h1 {
+    font-size: 6.5rem;
+    text-align: left;
+    line-height: 8rem;
+    margin: 0 0 3rem;
+  }
+  .main-container .text-container p {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 0 6.5rem;
+  }
+  .main-container .text-container button {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
   }
 }
 
 /* Small screens, laptops */
 @media (min-width: 769px) and (max-width: 1024.99px) {
-  body {
+  /* body {
     background-color: green;
+  } */
+
+  .main-container .text-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    padding: 2rem !important;
+  }
+  .main-container .bg-image {
+    height: 150vh !important;
+  } 
+  .main-container .text-container h1 {
+    font-size: 5.5rem;
+    text-align: left;
+    line-height: 8rem;
+    margin: 0 0 2.5rem;
+  }
+  .main-container .text-container p {
+    font-size: 1.8rem;
+    /* line-height: 3.2rem; */
+    text-align: left;
+    margin: 0 0 4.5rem;
+  }
+  .main-container .text-container button {
+    width: 100%;
+    padding: 2rem 3.5rem !important;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .aboutContainer .aboutCard p {
+    font-size: 3rem !important;
+    line-height: 3.25rem !important;
   }
 }
 
